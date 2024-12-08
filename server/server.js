@@ -3,12 +3,9 @@ const mongoose = require('mongoose');
 
 //specifying location for env file
 const dotenv = require('dotenv');
-dotenv.config({ path: './config.env' });
-
+dotenv.config({ path: 'config.env' });
+console.log(process.env.ATLAS_URL);
 const cors = require('cors');
-
-// Initialize dotenv to load environment variables
-dotenv.config();
 
 const app = express();
 //set port to 4000
@@ -19,7 +16,7 @@ app.use(cors());
 app.use(express.json()); // For parsing application/json
 
 // Connect to MongoDB Atlas
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.ATLAS_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("Connected to MongoDB Atlas");
   })
