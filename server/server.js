@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json()); // For parsing application/json
 
 // Connect to MongoDB Atlas
-mongoose.connect(process.env.ATLAS_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.ATLAS_URL)
   .then(() => {
     console.log("Connected to MongoDB Atlas");
   })
