@@ -6,14 +6,17 @@ const SignUpForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const [income, setIncome] = useState([0, 0, 0]);
 
   //function to log the sign up data into the database
   const handleSignup = async () => {
+    console.log({ username, password, income });
+    console.log('Data sent to server:', { username, password, income });
     try {
       const response = await fetch('http://localhost:4000/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, password , income }),
       });
 
       const data = await response.json();
@@ -68,6 +71,22 @@ const SignUpForm = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
+      </div>
+      <div>
+          <h3>Past 3 Months' Income</h3>
+          {income.map((value, index) => (
+          <input
+            key={index}
+            type="number"
+            placeholder={`Month ${index + 1} Income`}
+            value={income[index]}
+            onChange={(e) => {
+              const newIncome = [...income];
+              newIncome[index] = Number(e.target.value);
+              setIncome(newIncome);
+            }}
+          />
+        ))}
       </div>
      
       <button style={{

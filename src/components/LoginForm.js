@@ -22,12 +22,12 @@ const LoginForm = () => {
       });
 
       const data = await response.json();
-
+  
       if (response.ok) {
+        localStorage.setItem('username', username); // Store username in localStorage
+        console.log(username);
         setMessage('Login successful!');
         navigate('/dashboard');
-
-        console.log(data.user); // Display user data in the console
       } else {
         setMessage(data.message);
       }
@@ -35,6 +35,7 @@ const LoginForm = () => {
       setMessage('An error occurred');
     }
   };
+  
 
   //take in user input to be check with database data
   return (
