@@ -9,6 +9,10 @@ import ChartsPage from './pages/ChartsPage.js';
 import SavingsPage from './pages/SavingsPage.js';
 import UpdateValues from './pages/UpdateValues.js';
 
+import './styling/standardPageStyle.css';
+
+
+
 const AppContent = () => {
 
     const location = useLocation();
@@ -29,8 +33,8 @@ const AppContent = () => {
                     </Routes>
                 </div>
 
-            {/* Render Footer on all pages except the HomePage */}
-            {location.pathname !== '/' && <Footer />}
+            
+             <Footer/>
         </>
     );
 };

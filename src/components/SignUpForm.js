@@ -30,20 +30,58 @@ const SignUpForm = () => {
 
   //sign up page for user to enter there new details
   return (
-    <div>
+    <div style={{textAlign: "center"}}>
       <h2>Signup</h2>
+      <div>
+        <input
+          style={{
+            width: "50%",
+            padding: "0.8rem",
+            marginBottom: "1rem",
+            fontSize: "1rem",
+            border: "2px solid #ddd",
+            borderRadius: "5px",
+            boxSizing: "border-box",
+            outline: "none",
+            transition: "border-color 0.3s ease",
+           }}
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        /> 
+      </div>
+      <div>
       <input
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
+          style={{
+          width: "50%",
+          padding: "0.8rem",
+          marginBottom: "1rem",
+          fontSize: "1rem",
+          border: "2px solid #ddd",
+          borderRadius: "5px",
+          boxSizing: "border-box",
+          outline: "none",
+          transition: "border-color 0.3s ease",
+        }}      
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleSignup}>Signup</button>
+      </div>
+     
+      <button style={{
+        backgroundColor: "#6a1b9a", 
+        padding:"15px",
+        color: "white", 
+        padding: "0.8rem 1.5rem", 
+        fontSize: "1rem",
+        fontWeight: "bold", 
+        border: "none", 
+        borderRadius: "5px", 
+        cursor: "pointer", 
+        transition: "background-color 0.3s ease, box-shadow 0.3s ease", 
+        margin: "10px",}} onClick={handleSignup}>Signup</button>
       {message && <p>{message}</p>}
     </div>
   );

@@ -38,21 +38,60 @@ const LoginForm = () => {
 
   //take in user input to be check with database data
   return (
-    <div>
-      <h2>Login</h2>
-      <input
-        
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>Login</button>
+    <div style={{textAlign: "center"}} >
+      <h2 >Login</h2>
+
+      <div>
+        <input
+          style={{
+            width: "50%",
+            padding: "0.8rem",
+            marginBottom: "1rem",
+            fontSize: "1rem",
+            border: "2px solid #ddd",
+            borderRadius: "5px",
+            boxSizing: "border-box",
+            outline: "none",
+            transition: "border-color 0.3s ease",
+          }} 
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
+
+      <div>
+        <input
+          style={{
+            width: "50%",
+            padding: "0.8rem",
+            marginBottom: "1rem",
+            fontSize: "1rem",
+            border: "2px solid #ddd",
+            borderRadius: "5px",
+            boxSizing: "border-box",
+            outline: "none",
+            transition: "border-color 0.3s ease",
+          }} 
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+     
+      <button style={{
+        backgroundColor: "#6a1b9a", 
+        padding:"15px",
+        color: "white", 
+        padding: "0.8rem 1.5rem", 
+        fontSize: "1rem",
+        fontWeight: "bold", 
+        border: "none", 
+        borderRadius: "5px", 
+        cursor: "pointer", 
+        margin: "10px", 
+        transition: "background-color 0.3s ease, box-shadow 0.3s ease", }} onClick={handleLogin}>Login</button>
       {message && <p>{message}</p>}
     </div>
   );
