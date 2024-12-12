@@ -1,3 +1,5 @@
+//js server file that connects to mongodb server and confirms it has connected succesfully
+
 const express = require('express');
 const mongoose = require('mongoose');
 

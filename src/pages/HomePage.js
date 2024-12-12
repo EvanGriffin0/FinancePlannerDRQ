@@ -1,0 +1,1 @@
+//initial page user is met with where they can sign up or log in
