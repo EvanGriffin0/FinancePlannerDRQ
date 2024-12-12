@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+// created routing paths for my pages in react
+import React, { Component } from 'react';
+import { BrowserRouter as Router,Routes, Route,useLocation  } from 'react-router-dom';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
+import HomePage from './pages/HomePage.js';
+import Dashboard from './pages/Dashboard.js';
+import ChartsPage from './pages/ChartsPage.js';
+import SavingsPage from './pages/SavingsPage.js';
+import UpdateValues from './pages/UpdateValues.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const AppContent = () => {
+
+    const location = useLocation();
+
+    //created a basic template for my pages that use my header and footer components but exclude it from my homepage (aka my signup /login page )
+    return (
+        <>
+            {/* Render Header on all pages except the HomePage */}
+            {location.pathname !== '/' && <Header />}
+        
+                <div className="main-content">
+                    <Routes>
+                        <Route path="/" exact element={HomePage} />
+                        <Route path="/dashboard" element={Dashboard} />
+                        <Route path="/charts" element={ChartsPage} />
+                        <Route path="/savings" element={SavingsPage} />
+                        <Route path="/update" element={UpdateValues} />
+                    </Routes>
+                </div>
+
+            {/* Render Footer on all pages except the HomePage */}
+            {location.pathname !== '/' && <Footer />}
+        </>
+    );
+};
+
+const App = () => {
+    return (
+      <Router>
+        <AppContent /> {}
+      </Router>
+    );
+  };
 
 export default App;

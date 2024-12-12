@@ -1,0 +1,25 @@
+/* styling page for my header component*/
+.header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}

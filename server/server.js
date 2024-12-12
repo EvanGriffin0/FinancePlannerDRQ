@@ -1,13 +1,16 @@
 //js server file that connects to mongodb server and confirms it has connected succesfully
+const dotenv = require('dotenv');
+
+//link to user authentication route
+const authRoutes = require('./routes/authRoutes');
 
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 //specifying location for env file
 const dotenv = require('dotenv');
 dotenv.config({ path: 'config.env' });
-console.log(process.env.ATLAS_URL);
-const cors = require('cors');
 
 const app = express();
 //set port to 4000
@@ -25,11 +28,6 @@ mongoose.connect(process.env.ATLAS_URL)
   .catch((err) => {
     console.error("Error connecting to MongoDB", err);
   });
-
-// Test route to check server functionality
-app.get('/', (req, res) => {
-  res.send('Hello, Finance Planner!');
-});
 
 // Start the server
 app.listen(PORT, () => {
