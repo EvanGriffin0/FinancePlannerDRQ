@@ -1,11 +1,11 @@
 {
   "name": "finance-tracker",
   "version": "0.1.0",
-  "type":"module",
   "private": true,
   "dependencies": {
     "@mui/material": "^6.1.10",
     "axios": "^1.7.9",
+    "bcrypt": "^5.1.1",
     "chart.js": "^4.4.7",
     "cors": "^2.8.5",
     "cra-template": "1.2.0",

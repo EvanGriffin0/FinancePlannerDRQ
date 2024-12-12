@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 //specifying location for env file
-const dotenv = require('dotenv');
+
 dotenv.config({ path: 'config.env' });
 
 const app = express();
@@ -28,6 +28,9 @@ mongoose.connect(process.env.ATLAS_URL)
   .catch((err) => {
     console.error("Error connecting to MongoDB", err);
   });
+
+  //connect the routes 
+  app.use('/api/auth', authRoutes);
 
 // Start the server
 app.listen(PORT, () => {

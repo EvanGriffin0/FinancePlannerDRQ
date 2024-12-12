@@ -1,5 +1,5 @@
 // created routing paths for my pages in react
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router,Routes, Route,useLocation  } from 'react-router-dom';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
@@ -21,11 +21,11 @@ const AppContent = () => {
         
                 <div className="main-content">
                     <Routes>
-                        <Route path="/" exact element={HomePage} />
-                        <Route path="/dashboard" element={Dashboard} />
-                        <Route path="/charts" element={ChartsPage} />
-                        <Route path="/savings" element={SavingsPage} />
-                        <Route path="/update" element={UpdateValues} />
+                        <Route path="/" exact element={<HomePage /> } />
+                        <Route path="/dashboard" element={<Dashboard/> } />
+                        <Route path="/charts" element={<ChartsPage/>} />
+                        <Route path="/savings" element={<SavingsPage/>} />
+                        <Route path="/update" element={<UpdateValues/>} />
                     </Routes>
                 </div>
 
@@ -38,7 +38,7 @@ const AppContent = () => {
 const App = () => {
     return (
       <Router>
-        <AppContent /> {}
+        <AppContent /> 
       </Router>
     );
   };
