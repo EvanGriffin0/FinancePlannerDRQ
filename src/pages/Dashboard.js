@@ -18,9 +18,9 @@ const Dashboard = () => {
         <p>We are leading the industry with innovated graphing and budgeting tools</p>
         <p>We help you understand your finances better saving you time and effort</p>
         <p>To get started check out our Update Your Details page to get started!</p>
-    
-        <div>
-            <img src={pieChart} alt="Example" style={{ maxWidth: '35%', height: 'auto'}}/>
+   
+        <div style= {{margin:'10%'}}>
+            <img src={pieChart} alt="Example" style={{ maxWidth: '50%', height: 'auto'}}/>
             <img src={barChart} alt="Example" style={{ maxWidth: '50%', height: 'auto'}}/>
                     
         </div>
