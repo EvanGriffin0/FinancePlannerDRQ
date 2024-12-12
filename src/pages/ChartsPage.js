@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Link } from 'react-router-dom';
 
 // Register required Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -67,6 +68,12 @@ const ChartPage = () => {
   return (
     <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px', textAlign: 'center' }}>
       <h2>Expenditure Breakdown</h2>
+      <Link to='/update'>
+        <button style={{
+    color: '#D67FEE'}} >Set Your Expenditure</button>
+      </Link>
+      
+
       <Pie data={data} options={options} />
     </div>
   );

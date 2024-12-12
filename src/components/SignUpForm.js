@@ -76,6 +76,17 @@ const SignUpForm = () => {
           <h3>Past 3 Months' Income</h3>
           {income.map((value, index) => (
           <input
+          style={{
+            width: "20%",
+            padding: "0.8rem",
+            marginBottom: "1rem",
+            fontSize: "1rem",
+            border: "2px solid #ddd",
+            borderRadius: "5px",
+            boxSizing: "border-box",
+            outline: "none",
+            transition: "border-color 0.3s ease",
+          }}
             key={index}
             type="number"
             placeholder={`Month ${index + 1} Income`}
