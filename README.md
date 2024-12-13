@@ -1,10 +1,10 @@
 #This is a financial budgeting application built using the MERN stack 
 
-#The users can create there own accounts where there individual data will be stored , this data will be available to them once they sing back into there account
+#The users can create there own accounts where there individual data will be stored , this data will be available to them once they sign back into there account
 
-#Before running go to the server folder and begin the server by using the command "node server.js"
+#Before running the app , go to the server folder and begin the server by using the command "node server.js"
 
-#Once the server is up and running you can begin the program with npm start 
+#Once the server is up and running you can begin the program with "npm start"
 
 #Once in you can either sign in with any of the three test user accounts i created each containing there own data :
   Username: TestUserOne Password:Password
@@ -18,7 +18,7 @@
 
 #Once in , you are greeted at the dashboard where it gives  a breif description of the application, the instructions to get started and two example images
 
-#The user should then Update there details so the server has a record of ther epast 5 months expenditure 
+#The user should then Update there details so the server has a record of ther past 5 months expenditure 
 
 #Once that data has been saved you can click the Expenditure or Savings tab to view there unique Pie and bar charts 
 #the user can then go back and update there details to get new charts 
