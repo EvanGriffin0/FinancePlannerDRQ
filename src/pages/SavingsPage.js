@@ -68,7 +68,7 @@ const SavingsPage= () => {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', textAlign: 'center' }}>
       <h2>Income Comparison</h2>
-      <Bar data={data} options={options} />
+      <Bar style={{padding: "30px"}}  data={data} options={options} />
     </div>
   );
 };

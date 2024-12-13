@@ -2,8 +2,6 @@
 import pieChart from '../assets/Pie-chart.jpeg';
 import barChart from '../assets/bar-chart.jpeg';
 
-
-//placeholder
 const Dashboard = () => {
 
     const storedUsername = localStorage.getItem('username');
@@ -17,7 +15,7 @@ const Dashboard = () => {
         color: "#333",}}>Why Choose GriffinBudgeting?</h3>
         <p>We are leading the industry with innovated graphing and budgeting tools</p>
         <p>We help you understand your finances better saving you time and effort</p>
-        <p>To get started check out our Update Your Details page to get started!</p>
+        <p> check out our "Update Your Details" page to get started!</p>
    
         <div style= {{margin:'10%'}}>
             <img src={pieChart} alt="Example" style={{ maxWidth: '50%', height: 'auto'}}/>

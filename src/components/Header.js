@@ -13,7 +13,7 @@ const Header = () => {
             <nav>
                 <ul className="nav-links">
                     
-                    <img src={logo} alt="Example" style={{ maxWidth: '5%', height: 'auto'}}/>
+                    <img src={logo} alt="Example" style={{ maxWidth: '2%', height: 'auto'}}/>
                 
                     <li>
                         <Link to="/dashboard">Dashboard</Link>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 // Component to update user income and expenditure values
 const UpdateValues = () => {
-  // State to store user income data (array of 3 values for 3 months)
+  // State to store user income
   const [income, setIncome] = useState(['', '', '']);
   
   // State to store user expenditure data (transport, housing, etc.)
@@ -14,14 +14,13 @@ const UpdateValues = () => {
     other: '',
   });
 
-  // Fetch user data from the backend when the component mounts
+  // Fetch user data from the backend 
   useEffect(() => {
     const fetchUserData = async () => {
       const username = localStorage.getItem('username'); // Get username from localStorage
       console.log('Fetching data for username:', username);
   
       try {
-        // API call to fetch user data
         const response = await fetch(`http://localhost:4000/api/auth/userdata?username=${username}`, {
           method: 'GET',
         });
@@ -47,11 +46,11 @@ const UpdateValues = () => {
     };
   
     fetchUserData();
-  }, []); // Empty dependency array ensures this only runs once when the component mounts
+  }, []); 
 
   // Function to handle updates to user data
   const handleUpdate = async () => {
-    // Sanitize income and expenditure data before sending to backend
+    // validate data fir income and expenditure data before sending to backend
     const sanitizedIncome = income.map(value => Number(value)); // Convert income to numbers
     const sanitizedExpenditures = {
       transport: Number(expenditures.transport),
@@ -99,17 +98,17 @@ const UpdateValues = () => {
   };
   
   const headerStyle = {
-    textAlign: "center", // Center-align the header
+    textAlign: "center", 
     marginBottom: "20px",
     color: "#333",
   };
   
   const groupStyle = {
-    marginBottom: "20px", // Add spacing between input groups
+    marginBottom: "20px",
   };
   
   const inputStyle = {
-    width: "100%", // Full-width inputs
+    width: "100%", 
     padding: "10px",
     fontSize: "16px",
     marginBottom: "10px",
@@ -126,7 +125,7 @@ const UpdateValues = () => {
   };
   
   const buttonStyle = {
-    width: "100%", // Full-width button
+    width: "100%", 
     padding: "12px",
     backgroundColor: "#6a1b9a",
     color: "white",
@@ -143,7 +142,7 @@ const UpdateValues = () => {
     backgroundColor: "#8e24aa", 
   };
   
-  // Render the form
+  //load page
   return (
     <div style={containerStyle}>
       <h2 style={headerStyle}>Update Your Values</h2>

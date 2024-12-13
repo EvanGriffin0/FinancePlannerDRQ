@@ -6,7 +6,7 @@ import logo from '../assets/logo.png';
 
 //created a footer to be used throughout the site
 const Footer = () => {
-    //logo to be added later need to find an image
+    
   return (
     <footer className="footer">
       <p>© GriffinEnterprise</p>

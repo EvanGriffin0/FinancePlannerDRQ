@@ -24,7 +24,7 @@ const LoginForm = () => {
       const data = await response.json();
   
       if (response.ok) {
-        localStorage.setItem('username', username); // Store username in localStorage
+        localStorage.setItem('username', username); // Store username in localStorage to be able to access there data
         console.log(username);
         setMessage('Login successful!');
         navigate('/dashboard');

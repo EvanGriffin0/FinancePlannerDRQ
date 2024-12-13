@@ -78,12 +78,12 @@ const SignUpForm = () => {
           <input
           style={{
             width: "20%",
-            padding: "0.8rem",
             marginBottom: "1rem",
             fontSize: "1rem",
             border: "2px solid #ddd",
             borderRadius: "5px",
             boxSizing: "border-box",
+            padding:"20px",
             outline: "none",
             transition: "border-color 0.3s ease",
           }}

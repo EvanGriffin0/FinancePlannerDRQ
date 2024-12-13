@@ -50,7 +50,7 @@ const ChartPage = () => {
       {
         data: Object.values(expenditures), // Values from state
         backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'], // Colors
-        hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'], // Hover colors
+        hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'], // Hover 
       },
     ],
   };
@@ -60,21 +60,30 @@ const ChartPage = () => {
     responsive: true,
     plugins: {
       legend: {
-        position: 'bottom', // Position of the legend
+        position: 'bottom',  
       },
     },
   };
 
   return (
-    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px', textAlign: 'center' }}>
+    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '40px', textAlign: 'center' }}>
       <h2>Expenditure Breakdown</h2>
-      <Link to='/update'>
-        <button style={{
-    color: '#D67FEE'}} >Set Your Expenditure</button>
+      <Link >
+        <button style={{backgroundColor: '#4CAF50',
+                    border: 'none',
+                    color: 'white',
+                    padding: '10px 20px',
+                    fontSize: '16px',
+                    borderRadius: '8px',
+                    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    marginTop: '10px', 
+                    }} to='/update'>Edit Expenditure</button>
       </Link>
       
 
-      <Pie data={data} options={options} />
+      <Pie style={{padding: "30px"}} data={data} options={options} />
     </div>
   );
 };
